@@ -5,9 +5,9 @@
 ## 📌 Instruksi
 - Goal nya adalah menghapus semua value pada list a, yang dimana itu ada di value b
 - Contoh
-```
+```javascript
 arrayDiff([1,2],[1]) == [2]
 ```
-```
+```javascript
 arrayDiff([1,2,2,2,3],[2]) == [1,3]
 ```
