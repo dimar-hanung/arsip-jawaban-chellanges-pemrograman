@@ -1,4 +1,4 @@
-decodeMorse = function (morseCode) {
+export const decodeMorse = function (morseCode) {
   //your code here
   const morseLists = [
     { word: "A", morse: ".-" },
@@ -32,24 +32,21 @@ decodeMorse = function (morseCode) {
     { word: ":", morse: "---..." },
     { word: "-", morse: "-....-" },
     { word: "/", morse: "-..-." },
-    { word: "SOS", morse: "...---..." }
+    { word: "SOS", morse: "...---..." },
   ];
   return morseCode
     .trim()
     .split("  ")
-    .map(word =>
+    .map((word) =>
       word
         .split(" ")
         .map(
-          morse =>
+          (morse) =>
             morseLists
-              .filter(list => list.morse == morse)
-              .map(obj => obj.word)[0]
+              .filter((list) => list.morse == morse)
+              .map((obj) => obj.word)[0]
         )
         .join("")
     )
     .join(" ");
 };
-
-console.log(decodeMorse(".... . -.--   .--- ..- -.. ."));
-console.log(decodeMorse("...---..."));
