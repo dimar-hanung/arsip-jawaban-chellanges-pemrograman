@@ -1,4 +1,4 @@
-function rgb(r, g, b) {
+export const rgb = function (r, g, b) {
   // complete this function
   r > 255 ? (r = 255) : r < 0 ? (r = 0) : "";
   g > 255 ? (g = 255) : g < 0 ? (g = 0) : "";
@@ -11,7 +11,7 @@ function rgb(r, g, b) {
   let hex = `${r + g + b}`.toUpperCase();
 
   return hex;
-}
+};
 
 function convertLength(num) {
   if (num <= 15) {
@@ -22,8 +22,3 @@ function convertLength(num) {
     return num.toString(16);
   }
 }
-
-console.log(rgb(173, 255, 47), "ADFF2F");
-console.log(rgb(255, 255, 255), "FFFFFF");
-console.log(rgb(0, 0, 0));
-console.log(rgb(84, 0, 9), "540009");
